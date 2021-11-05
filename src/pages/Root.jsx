@@ -1,4 +1,5 @@
 import StoreProvider from 'components/context/Provider'
+import RouterPrivate from 'components/routes/Private/private'
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './Home/Home'
@@ -9,7 +10,7 @@ const PagesRoot = () => (
     <StoreProvider>
       <Switch>
         <Route path="/login" component={Login} />
-        <Route path="/" component={Home} />
+        <RouterPrivate path="/" component={Home} />
       </Switch>
     </StoreProvider>
   </Router>
